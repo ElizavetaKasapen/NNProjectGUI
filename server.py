@@ -30,7 +30,7 @@ def generate_image_full_model(model_class, path):
 
 def generate_image_state_dict( model_class,path):
     model = model_class
-    model = model.load_state_dict(torch.load(path), strict=False)
+    model.load_state_dict(torch.load(path), strict=False)
     model.eval()
     noise =  torch.randn(1, 100, 1, 1)
     img = model(noise)
