@@ -62,6 +62,6 @@ if st.button('Generate face with WGAN Model 0'):
 if st.button('Generate face with WGAN Model 1'):
     model_class = w_gan()
     print(model_class)
-    path = os.path.join("data", "models", "wgan_version_1.pt")
+    path = os.path.join("data", "models", "wgen_version_1.pt")
     image, o_path = generate_image_state_dict(model_class, path)
     st.image(o_path, width = 256, output_format='PNG')
