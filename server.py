@@ -3,7 +3,7 @@ import torch
 import torchvision.transforms as transforms
 from torchvision.utils import save_image
 import os
-from models.WGAN_Generator import Generator
+from models._0 import Generator
 from models.WGAN_Generator_1 import Generator as w_gan
 from models.DCGAN_Generator_0 import DCGAN_Generator_Model_0 as f_dcgan
 from models.DCGAN_Generator_1 import DCGAN_Generator_Model_1 as s_dcgan 
