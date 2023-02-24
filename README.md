@@ -1,6 +1,6 @@
-Faces Generator was deployed on the streamlit sharing: https://elizavetakasapen-nnprojectgui-server-wu5j6h.streamlit.app/ 
-But there is a problem because this server doesn't support CUDA operations. 
-In this case, it's possible to run user interface using the following command: streamlit run server.py
+**Faces Generator** was deployed on the streamlit sharing: https://elizavetakasapen-nnprojectgui-server-wu5j6h.streamlit.app/ <br />
+But there is a problem because this server doesn't support CUDA operations. <br />
+In this case, it's possible to run user interface using the following command: *streamlit run server.py*<br />
 
 Project structure:
 - data: includes folder for models weights, server output, data for training (it was not added to the repository because the size is very large)
