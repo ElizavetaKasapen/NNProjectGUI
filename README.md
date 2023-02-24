@@ -1,4 +1,4 @@
-Faces Generator was deployed on the streamlit sharing: https://elizavetakasapen-nnprojectgui-server-wu5j6h.streamlit.app/ <br />
+**Faces Generator** was deployed on the streamlit sharing: https://elizavetakasapen-nnprojectgui-server-wu5j6h.streamlit.app/ <br />
 But there is a problem because this server doesn't support CUDA operations. <br />
 In this case, it's possible to run user interface using the following command: *streamlit run server.py*<br />
 
