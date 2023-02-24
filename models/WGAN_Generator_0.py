@@ -4,30 +4,22 @@ class Generator(nn.Module):
     def __init__(self) -> None:
         super(Generator, self).__init__()
         self.main = nn.Sequential(
-            #input 100 * 1024 * 3
 
             nn.ConvTranspose2d(100, 1024,kernel_size= 4, stride= 2, padding=1, bias=False),
             nn.BatchNorm2d(1024),
             nn.ReLU(True),
-            #output  3 * 3
 
-            #input
             nn.ConvTranspose2d(1024, 512, kernel_size= 4, stride=2,padding= 1, bias=False),
             nn.BatchNorm2d(512),
             nn.ReLU(True),
-            #output  7*7
 
-            #input
             nn.ConvTranspose2d(512, 256, kernel_size= 4, stride=2,padding= 1, bias=False),
             nn.BatchNorm2d(256),
             nn.ReLU(True),
-            #output  14 * 14
 
-            # input
             nn.ConvTranspose2d(256, 128, kernel_size= 4, stride=2,padding= 1,bias=False),
             nn.BatchNorm2d(128),
             nn.ReLU(True),
-            # output  28*28
 
             nn.ConvTranspose2d(128, 64, kernel_size= 4, stride=2,padding= 1, bias=False),
             nn.BatchNorm2d(64),

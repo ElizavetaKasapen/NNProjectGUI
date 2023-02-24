@@ -14,10 +14,12 @@ st.subheader("")
 to_image = transforms.ToPILImage() 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
+
+#generate image from full model file
 def generate_image_full_model(path):
     model = torch.load(path)
     model.eval()
-    noise =  torch.randn(1, 100, 1, 1)#, device=device)
+    noise =  torch.randn(1, 100, 1, 1)
     img = model(noise).to(device)
     o_path = os.path.join('data','output','1.png')
     save_image(img, o_path, normalize=True)  
@@ -26,7 +28,8 @@ def generate_image_full_model(path):
     
     return img, o_path
 
-def generate_image_state_dict( model_class,path):
+#generate image with model from state dictionary
+def generate_image_state_dict(model_class, path):
     model = model_class
     model.load_state_dict(torch.load(path), strict=False)
     model.eval()
@@ -51,7 +54,7 @@ if st.button('Generate face with DCGAN Model 1'):
     st.image(o_path, width = 256, output_format='PNG')
 
 if st.button('Generate face with WGAN Model 0'):
-    model_class = w_gan()
+    model_class = Generator()
     print(model_class)
     path = os.path.join("data", "models", "wgan_version_0.pt")
     image, o_path = generate_image_full_model(path)
