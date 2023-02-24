@@ -35,6 +35,7 @@ def generate_image_state_dict( model,path):
     img = model(noise)
     img = torch.squeeze(img)
     img = to_image(img)    
+    return img
 
 if st.button('Generate face with DCGAN Model 0'):
     model_class =  f_dcgan()
@@ -49,7 +50,7 @@ if st.button('Generate face with DCGAN Model 1'):
     st.image(o_path, width = 256, output_format='PNG')
 
 if st.button('Generate face with WGAN Model 0'):
-    model_class = Generator()
+    model_class = w_gan()
     print(model_class)
     path = os.path.join("data", "models", "wgan_version_0.pt")
     image, o_path = generate_image_full_model(model_class, path)
