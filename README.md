@@ -8,6 +8,6 @@
 But there is a problem because this server doesn't support CUDA operations. <br />
 In this case, it's possible to run user interface using the following command: *streamlit run server.py*<br />
 
-The files for training are in the models/NoteBooks. To run the training code you could use either Google Colab or Jupiter Notebook. Please, make sure that you change the file paths according to your data.
+The files for training are in the models/NoteBooks. **To run the training code** you could use either Google Colab or Jupiter Notebook. Please, make sure that you change the file paths according to your data.
 
 
