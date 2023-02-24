@@ -15,7 +15,7 @@ to_image = transforms.ToPILImage()
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
 def generate_image_full_model(path):
-    model = torch.load(path)
+    model = torch.load(path, map_location=torch.device('cpu'))
     model.eval()
     noise =  torch.randn(1, 100, 1, 1)#, device=device)
     img = model(noise).to(device)
